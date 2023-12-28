@@ -1,0 +1,104 @@
+body {
+    line-height: 165%;
+    font-size: 18px;
+}
+
+blockquote {
+  margin: 0;
+}
+
+blockquote p {
+  padding: 15px;
+  background: #eee;
+}
+
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.pdf {
+    text-align: center;
+}
+
+.cv {
+    max-width: 1322px;
+    margin: 0 auto;
+}
+
+.cv_header {
+    display: flex;
+    gap: 50px;
+}
+.cv_header img {
+    display: inline-block;
+    width: 30%;
+    height: auto;
+    filter: blur(4px);
+    filter: grayscale(1);
+    /*animation: profile-gimic 12s ease-in-out 0s infinite alternate;*/
+}
+
+.cv_greeting {
+    display: inline-block;
+    width: 70%;
+    font-size: 18px;
+}
+
+.cv_imgs{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cv_imgs li{
+    width: 25%;
+}
+
+
+.cv_imgs img{
+    transition: transform .25s ease-in-out
+}
+.cv_imgs img:hover{
+    transform: scale(200%)
+}
+
+.work {
+    margin-bottom: 25px;
+}
+
+.work_meta {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 10px;
+}
+
+.cv_people {
+    display: flex;
+    gap: 25px;
+}
+
+@keyframes profile-gimic {
+    0% {
+        border-radius: 50% 50% 100% 50%;
+    }
+    25% {
+        border-radius: 50% 100% 50% 50%;
+    }
+    50% {
+        border-radius: 100% 50% 50% 50%;
+    }
+    100% {
+        border-radius: 50% 50% 50% 100%;
+    }
+}
