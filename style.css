@@ -27,6 +27,7 @@ img {
 
 .pdf {
     text-align: center;
+    display: none;
 }
 
 .cv {
