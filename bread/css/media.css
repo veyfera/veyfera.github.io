@@ -1,0 +1,110 @@
+/* === DESKTOP FIRST === */
+
+@media (max-width : 1120px) {
+    ul.secondary-header_types {
+        margin-top: var(--mr);
+        margin-bottom: 0;
+    }
+
+}
+
+/* md <= Large (lg) */
+@media (max-width : 992px) {
+}
+
+/* sm <= Medium (md) */
+@media (max-width : 768px) {
+    .secondary-header_info h1{
+        margin-bottom: 20px;
+    }
+    .secondary-header_info{
+        font-size: var(--regular-text);
+    }
+
+    .secondary-header_list>li{
+        margin-bottom: var(--mr-sm);
+    }
+    ul.secondary-header_types {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    @media (max-width : 678px) {
+        .content-sep {
+            line-height: 100%;
+        }
+        .content-sep img{
+            max-height: 40px;
+        }
+    }
+
+    /* xs <= Small (sm) */
+    @media (max-width : 576px) {
+
+        ul.secondary-header_types {
+            /*margin-bottom: 30px;*/
+            margin-top: var(--mr-sm);
+        }
+        .secondary-header_info{
+            margin-top: 35px;
+        }
+        .secondary-header_info img{
+            margin-bottom: var(--mr-sm);
+        }
+        ul.secondary-header_types li {
+            margin: 5px;
+        }
+        .statistics {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0;
+        }
+        .row-one {
+            justify-content: end;
+        }
+        .row-one :last-child {
+            margin-top: -27%;
+        }
+        .row-two {
+            margin-top: -40%;
+            position: relative;
+        }
+        .row-two :nth-last-child(2) {
+            align-self: start;
+        }
+        .row-two :last-child {
+            margin-top: -100%;
+            margin-left: auto;
+        }
+        .row-two :last-child s{
+            color: red;
+            color: lightred;
+        }
+    }
+
+    @media (max-width : 480px) {
+        .main-header_cookies {
+            width: auto;
+        }
+        .content-sep {
+            flex-direction: column;
+            gap: 0;
+        }
+        .cake {
+            flex-direction: row;
+            flex-wrap:  wrap;
+            justify-content: space-between;
+        }
+        .cake__text {
+            order: -1;
+        }
+        .shots {
+            flex-direction: column;
+        }
+        .shots img {
+            align-self: end;
+        }
+        .row-two :last-child {
+            line-height: 1;
+        }
+    }
+
