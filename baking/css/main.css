@@ -62,69 +62,6 @@ img {
 
 /* USER STYLES */
 
-.main-header{
-    position: relative;
-    margin: 0 -22px;
-}
-
-.main-header_links {
-    font-size: 18px;
-    position: relative;
-    line-height: 1;
-}
-.main-header a {
-    color: #333;
-    text-decoration: none;
-}
-
-.main-header_links ul {
-    display: flex;
-    /*gap: 50px;*/
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    padding-top: 10px;
-    height: 30px;
-    z-index: 0;
-}
-.main-header_links li{
-    width: 100%;
-    padding: 5px;
-    text-align: center;
-    border-right: 1px solid #333;
-    position: relative;
-    background-color: #fff;
-}
-.main-header nav>ul>li:first-child {
-    border-left: 1px solid #333;
-}
-.main-header_links li:hover {
-    background-color: #efefef;
-}
-.main-header_links a{
-    padding: 10px;
-    display: block;
-}
-.main-header nav ul li:hover ul {
-    display: block;
-    background-color: #eee;
-}
-.main-header_links ul ul {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-.main-header_links ul ul li {
-    border-bottom: 1px solid #333;
-    border-right: none;
-}
-.main-header_links ul ul li:first-child {
-    border-top: 1px solid #333;
-}
-
 .header-placeholder {
     background-color: var(--placeholder-c);
     padding: 16px 30px;

@@ -1,66 +1,114 @@
-header {
-    display: block;
-    margin-bottom: 100px;
-}
-.main-header{
-    position: relative;
-    margin: 0 -22px;
-}
-
-.main-header_links {
+body {
+    line-height: 165%;
     font-size: 18px;
-    position: relative;
-    line-height: 1;
-}
-.main-header a {
-    color: #333;
-    text-decoration: none;
 }
 
-.main-header_links ul {
+blockquote {
+  margin: 0;
+}
+
+blockquote p {
+  padding: 15px;
+  background: #eee;
+}
+
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.pdf {
+    text-align: center;
+    display: none;
+}
+
+.cv, .main-header {
+    max-width: 1322px;
+    margin: 0 auto;
+}
+
+.cv_header {
+    column-gap: 50px;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "pic ring"
+        "pic sh";
+}
+.cv_header img {
+    max-width: 397px;
+    max-height: 527px;
+    width: 100%;
+    height: auto;
+    filter: blur(4px);
+    filter: grayscale(1);
+    /*animation: profile-gimic 12s ease-in-out 0s infinite alternate;*/
+    grid-area: pic;
+}
+
+.cv_epigraph {
+    grid-area: ring;
+}
+
+.cv_sh {
+    grid-area: sh;
+}
+
+.cv_imgs {
     display: flex;
-    /*gap: 50px;*/
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    padding-top: 10px;
-    height: 30px;
-    z-index: 0;
 }
-.main-header_links li{
-    width: 100%;
-    padding: 5px;
-    text-align: center;
-    border-right: 1px solid #333;
-    position: relative;
-    background-color: #fff;
+
+.cv_imgs li{
+    width: 25%;
 }
-.main-header nav>ul>li:first-child {
-    border-left: 1px solid #333;
+
+.cv_imgs img{
+    transition: transform .25s ease-in-out
 }
-.main-header_links li:hover {
-    background-color: #efefef;
+.cv_imgs img:hover{
+    transform: scale(200%)
 }
-.main-header_links a{
-    padding: 10px;
-    display: block;
+
+.work {
+    margin-bottom: 25px;
 }
-.main-header nav ul li:hover ul {
-    display: block;
-    background-color: #eee;
+
+.work_meta {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 10px;
 }
-.main-header_links ul ul {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
+
+.cv_people {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
 }
-.main-header_links ul ul li {
-    border-bottom: 1px solid #333;
-    border-right: none;
-}
-.main-header_links ul ul li:first-child {
-    border-top: 1px solid #333;
+
+@keyframes profile-gimic {
+    0% {
+        border-radius: 50% 50% 100% 50%;
+    }
+    25% {
+        border-radius: 50% 100% 50% 50%;
+    }
+    50% {
+        border-radius: 100% 50% 50% 50%;
+    }
+    100% {
+        border-radius: 50% 50% 50% 100%;
+    }
 }
