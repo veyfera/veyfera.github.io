@@ -4,12 +4,6 @@
     }
 }
 
-
-@media (max-width: 1200px) {
-    .cv_header img {
-        align-self: center;
-    }
-}
 @media (max-width: 1064px) {
     .cv_header {
         column-gap: 25px;
