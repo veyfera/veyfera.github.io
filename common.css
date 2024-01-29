@@ -19,6 +19,12 @@ header {
     font-style: italic;
     margin-top: -15px;
 }
+.main-header .espada a{
+    display: inline;
+}
+.main-header .espada a:hover{
+    color: red;
+}
 
 .main-header>ul{
     display: flex;
