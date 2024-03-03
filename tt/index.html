@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lombard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/md5.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+
+    <main class="container">
+        <div class="page-number">Страница <span id="page-number"></span></div>
+
+        <form class="filters" id="filters-form">
+
+            <label for="active-filter">Отсоритровать товары по </label>
+            <select id="active-filter" name="active-filter">
+                <option value="" disabled selected>...</option>
+                <option value="brand">бренду</option>
+                <option value="product">названию</option>
+                <option value="price">цене</option>
+            </select>
+
+            <div class="filter-types">
+                <select id="brand" name="brand" hidden>
+                    <option value="" disabled selected>Выберите бренд</option>
+                </select>
+
+                <input list="price" type="number" name="price" placeholder="Введите цену" hidden>
+                <datalist id="price"></datalist>
+
+                <input list="product" type="text" name="product" placeholder="Введите название" hidden>
+                <datalist id="product"></datalist>
+            </div>
+
+            <br>
+            <input type="submit" id="clear" value="Сбросить фильтр">
+            <input type="submit" id="apply" value="Применить фильтр">
+        </form >
+
+        <ul class="products" id="main-products">
+            <li hidden id="product-template">
+                <div class="id">{id}</div>
+                <div class="product">{product}</div>
+                <div class="brand">Бренд: {brand}</div>
+                <div class="price">{price} руб.</div>
+            </li>
+        </ul>
+        <div id="loading">
+            <img src="images/loading.gif" alt="Идет загрузка...">
+            Идет загрузка...
+        </div>
+
+        <nav id="pagination">
+        </nav>
+    </main>
+
+</body>
+</html>
