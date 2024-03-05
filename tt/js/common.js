@@ -194,6 +194,16 @@ async function initFilters() {
     }
 }
 
+window.navigation.addEventListener("navigate", (e) => {
+    console.log("Location changed, ", e)
+    urlP = new URL(e.destination.url).searchParams
+
+    //update 'current page' text
+    pageNumber.innerHTML = urlP.get("page") || 1
+
+    fetchProducts()
+})
+
 window.addEventListener("load", function() {
     password = generatePassword()
     urlP = new URLSearchParams(document.location.search)
@@ -212,14 +222,3 @@ window.addEventListener("load", function() {
 
     fetchProducts()
 })
-
-window.navigation.addEventListener("navigate", (e) => {
-    console.log("Location changed, ", e)
-    urlP = new URL(e.destination.url).searchParams
-
-    //update 'current page' text
-    pageNumber.innerHTML = urlP.get("page") || 1
-
-    fetchProducts()
-})
-
