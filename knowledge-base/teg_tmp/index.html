@@ -15,7 +15,7 @@
 
 
   <img src="avatar" alt="">
-  <div class="username"></div>
+  <div id="username"></div>
 
   if
   <div class="premium">
@@ -26,9 +26,13 @@
   <div class="invite"></div>
 
   <div class="coins"></div>
+  <div id="log">
+  </div>
 
   <script>
     console.log(this.window.Telegram.WebApp);
+    const userName = getElementById('username');
+    userName.innerHTML = this.window.Telegram.WebApp.username;
   </script>
   
 </body>
