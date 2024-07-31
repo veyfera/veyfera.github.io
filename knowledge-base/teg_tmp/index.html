@@ -34,6 +34,9 @@
     const userName = document.getElementById('username');
     <!--userName.innerHTML = this.window.Telegram.WebApp.username;-->
     userName.innerHTML = JSON.stringify(this.window.Telegram.WebApp);
+
+    const userName = document.getElementById('invite');
+    userName.innerHTML = JSON.stringify(this.window.Telegram.WebApp.initDataUnsafe.user);
   </script>
   
 </body>
