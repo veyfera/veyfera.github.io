@@ -32,7 +32,8 @@
   <script>
     console.log(this.window.Telegram.WebApp);
     const userName = document.getElementById('username');
-    userName.innerHTML = this.window.Telegram.WebApp.username;
+    <!--userName.innerHTML = this.window.Telegram.WebApp.username;-->
+    userName.innerHTML = JSON.stringify(this.window.Telegram.WebApp);
   </script>
   
 </body>
